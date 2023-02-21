@@ -64,7 +64,7 @@ def main(password=password_build(),pass_list=[]):
     arg = argparse.ArgumentParser()
     arg.add_argument("-ty",type=str,help="Password_Build<pb> Random_Password_Build<rpb>")
     arg.add_argument("-f",type=str,help="New_File_Name")
-    arg.add_argument("-woty",type=str,nargs=4,help="Word_Type low(abc..) upp(ABC..) dig(012..) pun(!@#...) No_Type<n>")
+    arg.add_argument("-woty",type=str,nargs="*",help="Word_Type low(abc..) upp(ABC..) dig(012..) pun(!@#...) No_Type<n>")
     arg.add_argument("-woli",type=int,help="Word_line [012 : 3 ...]")
     arg.add_argument("-lite",type=int,help="random_password_password mode / No mode 0")
     parse = arg.parse_args()
