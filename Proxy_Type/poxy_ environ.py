@@ -25,7 +25,6 @@ def html_proxy(file_path,list_date=[]):
     for proxy_html in f.readlines():
         list_date.append(proxy_html)
     del list_date[0:3]
-    print(list_date)
     with open(f"{path_name}/{new_file_name}","w+",encoding="utf-8")as proxy_date:
         key = {"proxy_list":list_date}
         proxy_date.write(json.dumps(key))
@@ -37,10 +36,10 @@ def main():
     f = open(file_path,"r",encoding="utf-8")
     proxy_file = json.loads(f.read())
     proxy = random.choice(proxy_file["proxy_list"])
-    print(proxy.strip("\n"))
     os.environ["http"] = proxy.strip("\n")
     os.environ["https"] = proxy.strip("\n")
-    print(os.environ["https"])
+    sys.stdout.write("Set_Environ_HTTP : " + os.environ["http"])
+    sys.stdout.write("Set_Environ_HTTPS : " + os.environ["https"])
 
 if __name__ == "__main__":
     main()
