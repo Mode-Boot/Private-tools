@@ -1,4 +1,4 @@
-import requests,pathlib,os,random,json
+import requests,pathlib,os,random,json,sys
 from bs4 import BeautifulSoup
 #textarea
 #target_url = "https://free-proxy-list.net/"
