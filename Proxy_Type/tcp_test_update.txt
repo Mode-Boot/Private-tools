@@ -1,0 +1,7 @@
+# Whimsical environment variable update code
+
+/*
+It is a code that updates environment variables without permission. I made it quite sloppy, so don't expect too much
+*/
+
+by Mode-Boot
