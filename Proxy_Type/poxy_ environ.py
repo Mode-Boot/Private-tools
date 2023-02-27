@@ -36,8 +36,8 @@ def main():
     f = open(file_path,"r",encoding="utf-8")
     proxy_file = json.loads(f.read())
     proxy = random.choice(proxy_file["proxy_list"])
-    os.environ["http"] = proxy.strip("\n")
-    os.environ["https"] = proxy.strip("\n")
+    os.environ["http"] = "http://" + proxy.strip("\n") + "/"
+    os.environ["https"] = "https://" + proxy.strip("\n") + "/"
     sys.stdout.write("Set_Environ_HTTP : " + os.environ["http"])
     sys.stdout.write("Set_Environ_HTTPS : " + os.environ["https"])
 
