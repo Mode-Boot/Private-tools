@@ -49,11 +49,10 @@ class Cry_Test:
         
     def main(self):
 
-        target_file = "test_target"
         cry_test = Cry_Test()
         target_path = cry_test.test_target()
         cry_test.target_encrypt(target_path)
-        cry_test.target_decrypt(target_file)
+        cry_test.target_decrypt(target_path)
 
 if __name__ == "__main__":
 
